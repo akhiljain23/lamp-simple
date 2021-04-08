@@ -1,11 +1,8 @@
 ---
 # This playbook deploys the LAMP application stack in this site.
 
-
-
-
-- name: deploy and configure the webservers and application
-  hosts: all
+- hosts: webserver dbserver
+  name: deploy and configure the webservers and application
   remote_user: root
 
   roles:
