@@ -12,14 +12,14 @@
     - web
 
 - name: deploy MySQL and configure the databases
-  hosts: all
+  hosts: dbserver
   remote_user: root
 
   roles:
     - db
 
 - name: Verify Installation
-  hosts: all
+  hosts: webserver
   tasks:
 
     - name: Query index page for application
